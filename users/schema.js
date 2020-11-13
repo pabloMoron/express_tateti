@@ -8,7 +8,7 @@ module.exports.UserSchema = new Schema('User', {
     },
     password: {
         type: String,
-        default: "123456",
+        default: "",
         required: "The password is required"
     },
     created: {
