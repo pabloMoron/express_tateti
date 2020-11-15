@@ -15,7 +15,7 @@ mongoose.connect(conf.mongoDb, {}, function (err) {
         console.error(err.message);
         process.exit();
     } else {
-        console.log("MongoDB conectado.");
+        console.log("MongoDB conectado. "+conf.mongoDb);
     }
 });
 

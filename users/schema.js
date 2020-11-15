@@ -1,10 +1,10 @@
-const { Schema } = require("mongoose")
+const mongoose = require("mongoose")
 
-module.exports.UserSchema = new Schema('User', {
+let UserSchema = new mongoose.Schema({
     user: {
         type: String,
         required: "Username is required",
-        unique: "The user name is not available"
+        unique: "The username is not available"
     },
     password: {
         type: String,
@@ -25,5 +25,6 @@ module.exports.UserSchema = new Schema('User', {
     },
 }, {collection: "users"});
 
-module.exports.User=mongoose.model("users", this.UserSchema);
+let user=mongoose.model("User", UserSchema);
+module.exports =  user 
 
